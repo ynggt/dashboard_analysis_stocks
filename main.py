@@ -5,18 +5,22 @@ from pathlib import Path
 # Adiciona o diretório base ao sys.path
 sys.path.append(str(Path(__file__).parent))
 
-from modulos import risco, simulador_portifolio, fundamental_analysis
+from modulos import analise_fundamentalista, risco, simulacao_carteira
 
 # Título do Dashboard
-st.title('Dashboard do Mercado Financeiro')
+
 
 # Barra de Navegação
-page = st.sidebar.selectbox('Selecione a Página', ['Análise de Risco', 'Simulação de Portfólio', 'Análise Fundamentalista'])
+st.sidebar.image("imagens/logotipo.png")
+page = st.sidebar.selectbox('Selecione a Página', ['Análise de Risco', 'Fronteira Eficiente', 'Análise Fundamentalista','Simulação de Carteira'])
+
 
 # Navegação
 if page == 'Análise de Risco':
     risco.show()
-elif page == 'Simulação de Portfólio':
-    simulador_portifolio.show()
+elif page == 'Fronteira Eficiente':
+    fronteira_eficiente.show()
 elif page == 'Análise Fundamentalista':
-    fundamental_analysis.show()
+    analise_fundamentalista.show()
+elif page == 'Simulação de Carteira':
+    simulacao_carteira.show()
