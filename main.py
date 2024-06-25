@@ -11,7 +11,7 @@ from modulos import analise_fundamentalista, risco, simulacao_carteira
 
 
 # Barra de Navegação
-st.sidebar.image("imagens/logotipo.png")
+st.sidebar.image("imagem/OIP.png")
 page = st.sidebar.selectbox('Selecione a Página', ['Análise de Risco', 'Fronteira Eficiente', 'Análise Fundamentalista','Simulação de Carteira'])
 
 
