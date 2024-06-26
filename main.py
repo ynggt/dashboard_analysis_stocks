@@ -18,8 +18,6 @@ page = st.sidebar.selectbox('Selecione a Página', ['Análise de Risco', 'Fronte
 # Navegação
 if page == 'Análise de Risco':
     risco.show()
-elif page == 'Fronteira Eficiente':
-    fronteira_eficiente.show()
 elif page == 'Análise Fundamentalista':
     analise_fundamentalista.show()
 elif page == 'Simulação de Carteira':
